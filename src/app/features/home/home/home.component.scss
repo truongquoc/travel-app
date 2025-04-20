@@ -1,0 +1,309 @@
+// Home Component Styles
+
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$accent-color: #f39c12;
+$text-color: #333;
+$light-gray: #f5f5f5;
+$dark-gray: #444;
+
+.home-container {
+  width: 100%;
+}
+
+// Hero Section
+.hero-section {
+  height: 500px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  margin-bottom: 50px;
+
+  .hero-content {
+    max-width: 800px;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  .search-box {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+
+    .search-input {
+      flex: 1;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 1rem;
+    }
+
+    .search-button {
+      padding: 15px 30px;
+      background-color: $accent-color;
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+  }
+}
+
+// Section Styles
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: $dark-gray;
+  font-weight: 600;
+}
+
+// Featured Destinations
+.featured-section {
+  padding: 50px 20px;
+  margin-bottom: 50px;
+}
+
+.destination-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.destination-card {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-content {
+    padding: 20px;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: $dark-gray;
+    }
+
+    p {
+      color: $dark-gray;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .card-button {
+      padding: 10px 20px;
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+// Categories Section
+.categories-section {
+  padding: 50px 20px;
+  background-color: $light-gray;
+  margin-bottom: 50px;
+}
+
+.category-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.category-card {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  .category-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    color: $dark-gray;
+  }
+}
+
+// Testimonials Section
+.testimonials-section {
+  padding: 50px 20px;
+  margin-bottom: 50px;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+  .testimonial-content {
+    p {
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: $dark-gray;
+    }
+
+    .testimonial-author {
+      text-align: right;
+      font-weight: 600;
+      color: $primary-color;
+    }
+  }
+}
+
+// Call to Action Section
+.cta-section {
+  padding: 80px 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+
+  .cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      padding: 15px 40px;
+      background-color: $accent-color;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+  }
+}
+
+// Responsive Adjustments
+@media (max-width: 768px) {
+  .hero-section {
+    height: 400px;
+
+    .hero-content {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .search-box {
+      flex-direction: column;
+
+      .search-input {
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      .search-button {
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .destination-card {
+    max-width: 100%;
+  }
+
+  .category-card {
+    width: 150px;
+    height: 150px;
+  }
+}
